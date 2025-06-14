@@ -1,0 +1,59 @@
+#canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+#cards {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+#titlePage {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#logoLand {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+}
+
+/*RESPONSIVIDADE Celulares */
+@media (max-width: 767px) {
+  #cards {
+    display: none;
+  }
+
+  #logoLand {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+
+/* ESTILOS PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+   #cards {
+    display: none;
+  }
+
+  #logoLand {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
