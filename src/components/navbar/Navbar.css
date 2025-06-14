@@ -1,0 +1,163 @@
+nav {
+  width: 100%;
+  height: auto;
+  background-color: #242222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 1rem;
+}
+
+ul li {
+  cursor: pointer;
+  transition: scale 0.5s ease, color 0.5s ease;
+}
+
+ul li:hover {
+  scale: 1.1;
+  color: #f70;
+}
+
+#buttonNav {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: scale 0.5s ease, background-color 0.5s ease;
+}
+
+#buttonNav:hover {
+  scale: 1.1;
+  background-color: #f70;
+}
+
+#buttonAbout {
+  display: none;
+  cursor: pointer;
+}
+
+/*-------------ESTILIZANDO SIDEBAR----------------*/
+
+.sideBar {
+  height: 100%;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #000;
+  color: #fff;
+  z-index: 1222;
+  padding: 1rem;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.sideBar.open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.titleProject {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-socialMedias {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container-socialMedias p {
+  text-align: center;
+}
+
+.socialMedias {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.nav-sideBar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  gap: 1rem;
+}
+
+.title-Autor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(81, 0, 255);
+  border-radius: 0.5rem;
+}
+
+.sidebar-status {
+  text-align: center;
+}
+
+
+/*ESTILIZANDO MODELO PRA CELULARES*/
+@media (max-width: 767px) {
+  .container-navPage {
+    display: none;
+  }
+
+  #buttonNav {
+    display: none;
+  }
+
+  #buttonAbout {
+    display: block;
+  }
+
+  #buttonAbout img {
+    width: 30px;
+    filter: invert(1);
+  }
+}
+
+/* ESTILOS PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-navPage {
+    display: none;
+  }
+
+  #buttonNav {
+    display: none;
+  }
+
+  #buttonAbout {
+    display: block;
+  }
+
+  #buttonAbout img {
+    width: 30px;
+    filter: invert(1);
+  }
+}
+
