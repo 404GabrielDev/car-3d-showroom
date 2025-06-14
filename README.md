@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# 3D Car Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A sleek 3D car visualization project built with React, Vite, and TypeScript.  
+It uses Three.js via `@react-three/fiber` and `@react-three/drei` for rendering 3D models.  
+The interface is responsive using pure CSS and SCSS.  
+New features like multi-car views and interactive camera controls are planned.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 3D car model rendering with Three.js  
+- Responsive design with pure CSS and SCSS  
+- Built with React + Vite + TypeScript + SWC for fast builds  
+- Smooth animations with AOS library  
+- Styled with Styled Components and React Icons  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React 19  
+- Vite  
+- TypeScript  
+- Three.js (`@react-three/fiber`, `@react-three/drei`)  
+- Styled Components  
+- SCSS / CSS  
+- AOS (Animate on Scroll)  
+- React Icons  
+
+## Installation
+
+1. Clone the repository:  
+```bash
+git clone https://github.com/your-username/your-repo.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Navigate to the project folder:
+```bash
+cd Z Project 3d 2.0
 ```
+
+3. Install dependencies:
+```bash
+npm install
+#or
+yarn install
+```
+
+4. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+5. Open http://localhost:5173 in your browser.
+
+Roadmap
+- Add multiple car models view
+- Improve camera controls and animations
+- Add user interaction (select, zoom, rotate)
+- Integrate with backend API for car data
+- Optimize performance and loading time
+
+Made with by [João Gabriel]
+
+## 📬 Contato
+
+Fique à vontade para entrar em contato:  
+**João Gabriel** – Desenvolvedor Full Stack  
+[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-gabriel-s-b22407365/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joaogabriell.ssm@gmail.com?subject=Contato%20via%20GitHub&body=Olá%20João,%20vi%20seu%20projeto%20no%20GitHub%20e%20gostaria%20de%20falar%20com%20você.)
+
