@@ -1,5 +1,8 @@
 # 3D Car Showcase
 
+
+![Car Showcase Screenshot](/screenshotProject/homePage.png)
+
 ## Description
 
 A sleek 3D car visualization project built with React, Vite, and TypeScript.  
