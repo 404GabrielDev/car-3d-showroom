@@ -1,7 +1,7 @@
 # 3D Car Showcase
 
 
-![Car Showcase Screenshot](screenshotProject/homePage.png)
+![Car Showcase Screenshot](public/screenshotProject/homePage.png)
 
 ## Description
 
