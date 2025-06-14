@@ -67,7 +67,7 @@ Made with by [João Gabriel]
 
 Fique à vontade para entrar em contato:  
 **João Gabriel** – Desenvolvedor Full Stack  
-[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-gabriel-s-b22407365/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-gabriel-s-b22407365/) 
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joaogabriell.ssm@gmail.com?subject=Contato%20via%20GitHub&body=Olá%20João,%20vi%20seu%20projeto%20no%20GitHub%20e%20gostaria%20de%20falar%20com%20você.)
 
