@@ -69,6 +69,7 @@ Made with by [João Gabriel]
 ## 📬 Contact
 
 Feel free to get in touch:
+
 **João Gabriel** - Full Stack Developer
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-gabriel-s-b22407365/) 
 
