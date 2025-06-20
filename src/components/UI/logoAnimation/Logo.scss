@@ -1,0 +1,25 @@
+.home-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.section-titles {
+  width: 500px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+
+p {
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+span {
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700;
+}
