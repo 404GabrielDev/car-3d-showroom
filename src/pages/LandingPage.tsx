@@ -10,7 +10,6 @@ import UseWindowWidth from "../components/UI/MobileOnly/UseWindowWidth";
 import { useLoading } from "../components/Context/LoadingContext/LoadingContext";
 
 //TIPAR TUDO ❌
-//FAZER GIT PRA ESSA BRANCH (SEGURANÇA)
 const cars = [
   {
     name: "Porsche",
