@@ -30,6 +30,8 @@ Then open:
 
 🔗 Docker Hub: https://hub.docker.com/r/404gabriel/projeto-3d
 
+---
+
 
 ## Features
 
