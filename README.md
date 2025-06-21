@@ -3,12 +3,33 @@
 
 ![Car Showcase Screenshot](public/screenshotProject/homePage.png)
 
+![Car Screenshot mobile](public/screenshotProject/homeMobile.png)
+
 ## Description
 
 A sleek 3D car visualization project built with React, Vite, and TypeScript.  
 It uses Three.js via `@react-three/fiber` and `@react-three/drei` for rendering 3D models.  
 The interface is responsive using pure CSS and SCSS.  
 New features like multi-car views and interactive camera controls are planned.
+
+---
+## 🐳 Run with Docker
+
+The project is available as a Docker container.  
+You can run it without installing Node.js or dependencies.
+
+### 🏗️ Pull the image:
+
+```bash
+docker pull 404gabriel/projeto-3d:latest
+docker run -d -p 3000:80 404gabriel/projeto-3d
+```
+
+Then open:
+➡️ http://localhost:3000
+
+🔗 Docker Hub: https://hub.docker.com/r/404gabriel/projeto-3d
+
 
 ## Features
 
