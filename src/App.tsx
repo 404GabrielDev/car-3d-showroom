@@ -1,18 +1,14 @@
-import React, { useEffect, useState, Suspense } from "react";
+import { useEffect} from "react";
 import "./App.css";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
 import LandingPage from "./pages/LandingPage";
-import Teste from "./pages/Teste/Test";
+// @ts-expect-error AOS has no typing.
+import AOS from 'aos';
 
-//AJUSTAR OS CARDS (PRA UM COMPONENTE SEPARADO) ❌
-//TIPAR TUDO ❌
-//LOGO FICANDO POR CIMA DO LOADING ❌
-//FAZER INTEGRAÇÃO PRA UM COMPONENTE SEPARADO ❌
 
 function App() {
   useEffect(() => {
-    const time = setTimeout(() => {
+    setTimeout(() => {
       AOS.init({
         disable: false,
         startEvent: "DOMContentLoaded",

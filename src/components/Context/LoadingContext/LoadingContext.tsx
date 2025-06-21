@@ -1,9 +1,19 @@
 // LoadingContext.tsx
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState} from "react";
+import type { ReactNode } from "react";
 
-const LoadingContext = createContext(null);
+type LoadingContextType = {
+  isLoading:boolean;
+  setIsLoading: (Value: boolean) => void;
+}
 
-export const LoadingProvider = ({ children }) => {
+const LoadingContext = createContext<LoadingContextType | undefined>(undefined);
+
+
+type LoadingProviderProps = {
+  children: ReactNode;
+}
+export const LoadingProvider = ({ children }: LoadingProviderProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -13,4 +23,10 @@ export const LoadingProvider = ({ children }) => {
   );
 };
 
-export const useLoading = () => useContext(LoadingContext);
+export const useLoading = () => {
+  const context = useContext(LoadingContext);
+  if(context === undefined) {
+    throw new Error("useLoading must be used within a LoadingProvider")
+  }
+  return context;
+}

@@ -1,36 +1,50 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./CarSideBar.css";
 import ToggleButton from "../ToggleButton/ToggleButton";
-import { useLoading } from "../../Context/LoadingContext/LoadingContext";
-import LoadingCar from "../LoadingCar/LoadingCar";
 import { AnimatePresence, motion } from "framer-motion";
 import Loading from "../LoadingCar/LoadingCar";
 //OTIMIZAR BOTÃO
+
+type Car = {
+  name: string;
+  path: string;
+  thumb: string;
+  scale: number;
+  position: [number, number, number];
+  rotation: [number, number, number];
+};
+
+type SideBarProps = {
+  currentCarIndex: number;
+  handleSelectCar: (index: number) => void;
+  cars: Car[];
+};
+
 function SideBar({
   currentCarIndex,
   handleSelectCar: originalHandleSelectCar,
   cars,
-}) {
+}: SideBarProps) {
   const [sideBar, setSideBar] = useState(false);
 
   const showSideBar = () => setSideBar(!sideBar);
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const time = (index) => {
+  const time = (index: number) => {
     if (currentCarIndex === index) {
       setIsLoading(false);
       return;
     }
     setIsLoading(true);
     setSideBar(false);
-    const timeLoading = setTimeout(() => {
+    setTimeout(() => {
       setIsLoading(false);
     }, 2800);
   };
 
-  const timeHandleIndex = (index) => {
-    const timeHandle = setTimeout(() => {
+  const timeHandleIndex = (index: number) => {
+    setTimeout(() => {
       originalHandleSelectCar(index);
     }, 1000);
   };
@@ -51,12 +65,12 @@ function SideBar({
         )}
       </AnimatePresence>
 
-        <div className={`container-gallery ${sideBar ? 'open' : ''}`}>
-          <div className="container-toggleBtn" onClick={showSideBar}>
-            <ToggleButton />
-          </div>
+      <div className={`container-gallery ${sideBar ? "open" : ""}`}>
+        <div className="container-toggleBtn" onClick={showSideBar}>
+          <ToggleButton />
+        </div>
 
-          <div className="icons-showroom">
+        <div className="icons-showroom">
           {cars.map((car, index) => (
             <img
               key={car.name}
@@ -70,8 +84,8 @@ function SideBar({
               style={{ cursor: "pointer" }}
             />
           ))}
-          </div>
         </div>
+      </div>
     </>
   );
 }

@@ -1,17 +1,17 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+
 import "./Model.css";
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
-import { OrbitControls, Environment, useProgress } from "@react-three/drei";
+import { OrbitControls, Environment} from "@react-three/drei";
 import { TextureLoader, Mesh, RepeatWrapping, Vector3 } from "three";
-import Card from "../../UI/card/Card";
-import Logo from "../../UI/logoAnimation/Logo";
 import { useLoading } from "../../Context/LoadingContext/LoadingContext";
 import UseWindowWidth from "../../UI/MobileOnly/UseWindowWidth";
 
 function Model({ currentCarIndex, cars }) {
-  //ENTENDER A LÓGICA, PAGINA DE LOADING NOVA, ESTILIZAÇÃO DA MUDANÇA DE CARROS 100% funcional
 
   const width = UseWindowWidth();
 
@@ -19,7 +19,7 @@ function Model({ currentCarIndex, cars }) {
 
   const garageGLTF = useLoader(GLTFLoader, "/models3d/studio.glb");
 
-  const { isLoading, setIsLoading } = useLoading();
+
 
   const textures = useLoader(TextureLoader, [
     "/textures/reflex/Metal049A_2K-PNG_Metalness.png",

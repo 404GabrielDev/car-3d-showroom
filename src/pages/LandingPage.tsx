@@ -1,6 +1,5 @@
-import React, { useEffect, useState, Suspense } from "react";
+import {useState } from "react";
 import "./LandingPage.css";
-import AOS from "aos";
 import Model from "../components/Scene/model3d/Model";
 import SideBar from "../components/UI/CarSideBar/CarSideBar";
 import Navbar from "../components/UI/navbar/Navbar";
@@ -9,40 +8,21 @@ import Logo from "../components/UI/logoAnimation/Logo";
 import UseWindowWidth from "../components/UI/MobileOnly/UseWindowWidth";
 import { useLoading } from "../components/Context/LoadingContext/LoadingContext";
 
-//TIPAR TUDO ❌
-const cars = [
-  {
-    name: "Porsche",
-    path: "/models3d/porsche.glb",
-    thumb: "/icons/PorscheIcon.webp",
-    scale: 70,
-    position: [0, -0.01, 0],
-    rotation: [0.02, 0, 0],
-  },
-  {
-    name: "BMW X6",
-    path: "/models3d/bmw-x6.glb",
-    thumb: "/icons/bmwX6Icon.webp",
-    scale: 0.7,
-    position: [-0.1, 0.41, 0],
-    rotation: [0.02, 0, 0],
-  },
-  {
-    name: "Mercedes",
-    path: "/models3d/Mercedes.glb",
-    thumb: "/icons/MercedesIcon.webp",
-    scale: 0.7,
-    position: [-0.2, -0.01, -0.2],
-    rotation: [0.02, 1.5, 0],
-  },
-];
+type Car = {
+  name: string;
+  path: string;
+  thumb: string;
+  scale:number,
+  position: [number, number, number];
+  rotation: [number, number, number];
+}
 
 function LandingPage() {
-  const { isLoading, setIsLoading } = useLoading();
+  const { isLoading } = useLoading();
   const [currentCarIndex, setCurrentCarIndex] = useState(0);
   const width = UseWindowWidth();
 
-  const cars = [
+  const cars: Car[] = [
     {
       name: "Porsche",
       path: "/models3d/porsche.glb",
@@ -69,7 +49,7 @@ function LandingPage() {
     },
   ];
 
-  const handleSelectCar = (index) => {
+  const handleSelectCar = (index:number) => {
     if (currentCarIndex === index) return;
     setCurrentCarIndex(index);
   };
