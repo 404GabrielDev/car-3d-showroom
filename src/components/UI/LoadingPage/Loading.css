@@ -1,19 +1,15 @@
-* {
-  overflow: hidden;
-}
-
 .container-loading {
-  width: 100%;
+  position: absolute;
+  width: 100vw;
   height: 100%;
   background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-
 .loader {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +17,7 @@
   height: 300px;
   margin: 130px 0;
   perspective: 780px;
+  overflow: hidden;
 }
 
 .text {
