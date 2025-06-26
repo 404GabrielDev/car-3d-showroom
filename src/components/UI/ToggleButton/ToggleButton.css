@@ -1,5 +1,6 @@
 /* From Uiverse.io by Navarog21 */
 #btnMoreCars {
+  overflow: hidden;
   width: 10em;
   position: relative;
   height: 3.5em;
