@@ -6,20 +6,17 @@ import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
-import { OrbitControls, Environment} from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 import { TextureLoader, Mesh, RepeatWrapping, Vector3 } from "three";
 import { useLoading } from "../../Context/LoadingContext/LoadingContext";
 import UseWindowWidth from "../../UI/MobileOnly/UseWindowWidth";
 
 function Model({ currentCarIndex, cars }) {
-
   const width = UseWindowWidth();
 
   const carGLTF = useLoader(GLTFLoader, cars[currentCarIndex].path);
 
   const garageGLTF = useLoader(GLTFLoader, "/models3d/studio.glb");
-
-
 
   const textures = useLoader(TextureLoader, [
     "/textures/reflex/Metal049A_2K-PNG_Metalness.png",
