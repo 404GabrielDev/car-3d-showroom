@@ -21,14 +21,14 @@ You can run it without installing Node.js or dependencies.
 ### 🏗️ Pull the image:
 
 ```bash
-docker pull 404gabriel/projeto-3d:latest
-docker run -d -p 3000:80 404gabriel/projeto-3d
+docker pull 404gabriel/carbondream-lite:v1.5
+docker run -d -p 3000:80 404gabriel/carbondream-lite
 ```
 
 Then open:
 ➡️ http://localhost:3000
 
-🔗 Docker Hub: https://hub.docker.com/r/404gabriel/projeto-3d
+🔗 Docker Hub: https://hub.docker.com/repository/docker/404gabriel/carbondream-lite/general
 
 ---
 
