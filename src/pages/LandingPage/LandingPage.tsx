@@ -7,6 +7,8 @@ import Logo from "../../components/UI/logoAnimation/Logo";
 import UseWindowWidth from "../../components/UI/MobileOnly/UseWindowWidth";
 import { useLoading } from "../../components/Context/LoadingContext/LoadingContext";
 
+//remover Logo em celular, dando problemas
+
 
 type Car = {
   name: string;
@@ -77,10 +79,6 @@ function LandingPage() {
   return (
     <div className="container-homePage">
       <Navbar />
-      {/*Logo texto simples */}
-      <div className="container-logo" data-aos="zoom-in"  data-aos-anchor-placement="top-bottom">
-        <Logo />
-      </div>
 
       <div
         className="container-landPage"
