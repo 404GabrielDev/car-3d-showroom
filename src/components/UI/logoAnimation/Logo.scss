@@ -14,12 +14,20 @@
   border-radius: 1rem;
 }
 
-p {
-  color: #00FFFF;
-  text-shadow: 0 0 10px #00FFFF;
+#titleMainPower {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
 }
 
-span {
-  color: #FFD700;
-  text-shadow: 0 0 10px #FFD700;
+#title2Main {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+@media (max-width: 767px) {
+  #titleMainPower,
+  #title2Main {
+    color: #000;
+    text-shadow: none;
+  }
 }

@@ -1,4 +1,3 @@
-
 nav {
   width: 100%;
   height: auto;
@@ -13,7 +12,7 @@ nav {
 }
 
 .container-navPage ul {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 ul {
   display: flex;
@@ -44,7 +43,6 @@ ul li:hover {
 
 #buttonNav:hover {
   scale: 1.1;
-  background-color: #f70;
 }
 
 #buttonAbout {
@@ -56,13 +54,14 @@ ul li:hover {
   display: flex;
   gap: 1rem;
   padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 /*-------------ESTILIZANDO SIDEBAR----------------*/
 
-.sideBar {
-  height: 100%;
-  z-index: 1000;
+.sideBarMobile {
+  z-index: 20;
   position: fixed;
   top: 0;
   right: 0;
@@ -73,14 +72,14 @@ ul li:hover {
   gap: 3rem;
   background-color: #000;
   color: #fff;
-  z-index: 1222;
   padding: 1rem;
+  opacity: 1;
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.sideBar.open {
+.sideBarMobile.open {
   opacity: 1;
   transform: translateX(0);
 }
@@ -131,7 +130,6 @@ ul li:hover {
   text-align: center;
 }
 
-
 /*ESTILIZANDO MODELO PRA CELULARES*/
 @media (max-width: 767px) {
   .container-navPage {
@@ -144,11 +142,11 @@ ul li:hover {
 
   #buttonAbout {
     display: block;
+    z-index: 1;
   }
 
   #buttonAbout img {
     width: 30px;
-    filter: invert(1);
   }
 }
 
@@ -168,14 +166,11 @@ ul li:hover {
 
   #buttonAbout img {
     width: 30px;
-    filter: invert(1);
   }
 }
- 
+
 @media (min-width: 1025px) {
-  .sideBar {
+  .sideBarMobile {
     display: none;
   }
-
 }
-

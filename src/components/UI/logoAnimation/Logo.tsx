@@ -1,19 +1,27 @@
+import { motion } from "framer-motion";
 import "./Logo.scss";
 
 const Logo = () => {
   return (
     <h1 className="home-title">
       <section className="section-titles">
-        <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
+        <motion.p
+          id="titleMainPower"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, delay: 1 }}
+        >
           Performance in every line
-        </p>
-        <span
-          data-aos="fade-left"
-          data-aos-duration="1500"
-          data-aos-delay="1500"
+        </motion.p>
+
+        <motion.span
+          id="title2Main"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, delay: 1.5 }}
         >
           Power in every detail
-        </span>
+        </motion.span>
       </section>
     </h1>
   );

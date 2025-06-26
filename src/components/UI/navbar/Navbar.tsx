@@ -4,13 +4,11 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import ButtonGithub from "../ButtonGithub/ButtonGithub";
 
 const Navbar = () => {
+  const [sideBar, setSideBar] = useState(false);
 
-    const [sideBar, setSideBar] = useState(false);
-
-
-    const showSideBar = () => {
-        setSideBar(!sideBar);
-    }
+  const showSideBar = () => {
+    setSideBar(!sideBar);
+  };
 
   return (
     <nav>
@@ -28,22 +26,28 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div id="container-btnGit">
-        <ButtonGithub />
-      </div>
-
       <p id="buttonAbout">
-        <img src="icons/menuBurger.svg" alt="icon-menu" onClick={showSideBar}></img>
+        <img
+        style={{filter:"invert(1)"}}
+          src="icons/menuBurger.svg"
+          alt="icon-menu"
+          onClick={showSideBar}
+        ></img>
       </p>
 
       {/*SIDE BAR DO CELULAR */}
 
-      <div className={`sideBar ${sideBar ? 'open' : ''}`}>
+      <div className={`sideBarMobile ${sideBar ? "open" : ""}`}>
         <div className="titleProject">
           <p>CarbonDream</p>
 
           <p id="buttonAbout">
-            <img src="icons/menuBurger.svg" alt="icon-menu" onClick={showSideBar}></img>
+            <img
+             style={{filter:"invert(1)"}}
+              src="icons/menuBurger.svg"
+              alt="icon-menu"
+              onClick={showSideBar}
+            ></img>
           </p>
         </div>
 
@@ -90,6 +94,15 @@ const Navbar = () => {
               <FaWhatsapp size={35} color="#25D366" />
             </a>
           </div>
+          <a
+            href="https://github.com/404GabrielDev/car-3d-showroom"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div id="container-btnGit">
+              <ButtonGithub />
+            </div>
+          </a>
         </div>
         <li className="sidebar-status">
           🚧 Project in progress
