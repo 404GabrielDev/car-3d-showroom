@@ -1,33 +1,34 @@
-* {
-  overflow: hidden;
+ *{
+  overflow-x: hidden;
 }
+
+/*Por que não fica fixo?/ absolute dá problema*/
 .container-gallery {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(70%);
-  transition: transform .5s ease;
-  z-index: 15;
+  background-color: #000;
+  position: fixed;
+  border: 2px solid red;
+  top: 14%;
+  right: 0;
+  border-radius: 0.5rem;
+  width: 500px;
+  height: 70%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 10;
+  border: 5px solid #000000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .container-gallery.open {
-  transform: translateY(0);
-}
-
-
-
-
-.container-toggleBtn {
-  background-color: #000;
+  opacity: 1;
+  transform: translateX(0%);
 }
 
 .icons-showroom {
+  max-width: 100%;
   display: flex;
+  flex-direction: column;
   padding: 1rem;
   justify-content: space-between;
   gap: 1rem;
@@ -37,20 +38,16 @@
   object-fit: cover;
   border-radius: 0.5rem;
   border: none;
-  transition: scale .5s ease, box-shadow .5s ease;
+  transition: scale 0.5s ease, box-shadow 0.5s ease;
 }
 
 .container-gallery img:hover {
-  scale: 1.1;
-  box-shadow:
-    0 0 10px #f70,
-    0 0 0 5px #f70;
+  box-shadow: 0 0 10px #f70, 0 0 0 5px #f70;
 }
 
 .container-gallery img.selected {
   border: 2px solid rgb(0, 247, 255);
 }
-
 
 /*COMPONENTE LOADING CAR*/
 
@@ -60,7 +57,6 @@
   background-color: transparent;
   position: absolute;
   top: 0;
-  border: 2px solid rgb(149, 0, 255);
 }
 
 .show {
@@ -85,26 +81,30 @@
   border-radius: 0.5rem;
   left: 0;
   padding: 1rem;
-  z-index: 10;
-  transition: border .5s ease;
+  transition: border 0.5s ease;
+  z-index: 20;
 }
 
 .loading-container:hover {
   border: 2px solid blue;
 }
 
-/*Atualizando pra tablets maiores (barra de carros)*/
-@media (min-width: 800px) {
+/*botão da sideBar */
+.toggleBtn {
+  z-index: 11;
+  position: absolute;
+  top: 9%;
+  right: 2%;
+  background-color: #000;
+}
+
+/*RESPONSIVIDADE Celulares */
+@media (max-width: 767px) {
   .container-gallery {
-  transform: translateY(75%);
-}
-}
-
-
-/*Atualizando pra Computadores*/
-
-@media (min-width: 1000px) {
-  .container-gallery img {
-    max-width: 200px;
+    max-width: 70%;
   }
+}
+
+/* ESTILOS PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
 }

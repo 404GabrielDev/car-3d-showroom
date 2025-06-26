@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./CarSideBar.css";
 import ToggleButton from "../ToggleButton/ToggleButton";
 import { AnimatePresence, motion } from "framer-motion";
-import Loading from "../LoadingCar/LoadingCar";
-//OTIMIZAR BOTÃO
+import LoadingCar from "../LoadingCar/LoadingCar";
+//OTIMIZAR BOTÃO (deixar o botão parado enquanto apenas a galeria mexe no eixo x, relax, vai dá certo! tranquilidade, apenas faça, e seja melhor que ontem.)
 
 type Car = {
   name: string;
@@ -25,11 +25,33 @@ function SideBar({
   handleSelectCar: originalHandleSelectCar,
   cars,
 }: SideBarProps) {
+
+
+
   const [sideBar, setSideBar] = useState(false);
 
   const showSideBar = () => setSideBar(!sideBar);
 
   const [isLoading, setIsLoading] = useState(false);
+
+  //funcionalidade pra desabilitar a sideBar a partir de determinado momento, já que ela não está fixa.
+    useEffect(() => {
+    function handleScroll() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      if (scrollY > 100) {
+        setSideBar(false);
+      } else {
+       return;
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   const time = (index: number) => {
     if (currentCarIndex === index) {
@@ -60,16 +82,15 @@ function SideBar({
             transition={{ duration: 1 }}
             className="loading-container"
           >
-            <Loading />
+            <LoadingCar />
           </motion.div>
         )}
       </AnimatePresence>
+      <div className="toggleBtn" data-aos="zoom-in" onClick={showSideBar}>
+        <ToggleButton />
+      </div>
 
       <div className={`container-gallery ${sideBar ? "open" : ""}`}>
-        <div className="container-toggleBtn" onClick={showSideBar}>
-          <ToggleButton />
-        </div>
-
         <div className="icons-showroom">
           {cars.map((car, index) => (
             <img
