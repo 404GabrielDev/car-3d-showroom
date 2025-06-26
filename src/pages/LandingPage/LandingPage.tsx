@@ -1,25 +1,27 @@
-import {useState } from "react";
+import { useState } from "react";
 import "./LandingPage.css";
-import Model from "../components/Scene/model3d/Model";
-import SideBar from "../components/UI/CarSideBar/CarSideBar";
-import Navbar from "../components/UI/navbar/Navbar";
-import Loading from "../components/UI/LoadingPage/Loading";
-import Logo from "../components/UI/logoAnimation/Logo";
-import UseWindowWidth from "../components/UI/MobileOnly/UseWindowWidth";
-import { useLoading } from "../components/Context/LoadingContext/LoadingContext";
+import Model from "../../components/Scene/model3d/Model";
+import SideBar from "../../components/UI/CarSideBar/CarSideBar";
+import Navbar from "../../components/UI/navbar/Navbar";
+import Logo from "../../components/UI/logoAnimation/Logo";
+import UseWindowWidth from "../../components/UI/MobileOnly/UseWindowWidth";
+import { useLoading } from "../../components/Context/LoadingContext/LoadingContext";
+
 
 type Car = {
   name: string;
   path: string;
   thumb: string;
-  scale:number,
+  scale: number;
   position: [number, number, number];
   rotation: [number, number, number];
-}
+};
 
 function LandingPage() {
   const { isLoading } = useLoading();
+
   const [currentCarIndex, setCurrentCarIndex] = useState(0);
+
   const width = UseWindowWidth();
 
   const cars: Car[] = [
@@ -47,19 +49,39 @@ function LandingPage() {
       position: [-0.2, -0.01, -0.2],
       rotation: [0.02, 1.5, 0],
     },
+
+    {
+      name: "BMW-M4",
+      path: "/models3d/BMW-M4.glb",
+      thumb: "/icons/BMW-M4Icon.webp",
+      scale: width < 500 ? 0.7 : 0.7,
+      position: [-0.2, -0.01, -0.2],
+      rotation: [0.015, 4.7, 0],
+    },
+
+    {
+      name: "Jaguar-2015",
+      path: "/models3d/Jaguar.glb",
+      thumb: "/icons/JaguarIcon.webp",
+      scale: width < 500 ? 85 : 80,
+      position: [-0.2, -0.01, -0.2],
+      rotation: [0.015, 0, 0],
+    },
   ];
 
-  const handleSelectCar = (index:number) => {
+  const handleSelectCar = (index: number) => {
     if (currentCarIndex === index) return;
     setCurrentCarIndex(index);
   };
 
   return (
     <div className="container-homePage">
-      <div className="container-logo" data-aos="zoom-in">
+      <Navbar />
+      {/*Logo texto simples */}
+      <div className="container-logo" data-aos="zoom-in"  data-aos-anchor-placement="top-bottom">
         <Logo />
       </div>
-      {isLoading && <Loading />}
+
       <div
         className="container-landPage"
         style={{
@@ -68,13 +90,14 @@ function LandingPage() {
           pointerEvents: isLoading ? "none" : "auto",
         }}
       >
-        <Navbar />      
-        
-        <SideBar
-          cars={cars}
-          currentCarIndex={currentCarIndex}
-          handleSelectCar={handleSelectCar}
-        />
+        <section className="container-sideBarCars">
+          <SideBar
+            cars={cars}
+            currentCarIndex={currentCarIndex}
+            handleSelectCar={handleSelectCar}
+          />
+        </section>
+
         <Model cars={cars} currentCarIndex={currentCarIndex} />
       </div>
     </div>
