@@ -1,0 +1,117 @@
+.container-explorePage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-explorePage {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  font-family: "Open-Sans", sans-serif;
+}
+
+/*Titulo dos cards*/
+#title-containerCards {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+}
+
+.keen-slider {
+  width: 100%;
+  max-height: 500px;
+}
+
+#cardImageSlider {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: scale 0.5s ease;
+}
+
+#cardImageSlider:hover {
+  scale: 1.1;
+}
+
+/*versão melhorada de distribuição de cards com grid*/
+.container-carsHolder {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center; 
+  align-content: center; 
+}
+
+
+.container-carsHolder img {
+  width: 100%;
+  border-radius: .5rem;
+}
+
+#video-lexus {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5rem;
+}
+
+#video-bm {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5rem;
+}
+
+#video-audi {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5rem;
+}
+
+#video-Subaru {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5rem;
+}
+
+/*EDITANDO O CONTAINER DE CADA CARD*/
+.container-cardCars {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .container-carsHolder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container-cardCars {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container-carsHolder {
+    height: 600;
+  }
+}
