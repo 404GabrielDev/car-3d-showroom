@@ -3,7 +3,6 @@ import "./LandingPage.css";
 import Model from "../../components/Scene/model3d/Model";
 import SideBar from "../../components/UI/CarSideBar/CarSideBar";
 import Navbar from "../../components/UI/navbar/Navbar";
-import Logo from "../../components/UI/logoAnimation/Logo";
 import UseWindowWidth from "../../components/UI/MobileOnly/UseWindowWidth";
 import { useLoading } from "../../components/Context/LoadingContext/LoadingContext";
 
