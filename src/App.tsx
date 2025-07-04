@@ -10,9 +10,6 @@ import { motion } from "framer-motion";
 import ExplorePage from "./pages/ExplorePage/ExplorePage";
 import Footer from "./components/UI/Footer/Footer";
 
-//arrumar os videos dos placeholders
-//arrumar layout mobile/adicionar fontes
-
 function App() {
   const { isLoading } = useLoading();
 
