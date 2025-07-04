@@ -6,8 +6,6 @@ import Navbar from "../../components/UI/navbar/Navbar";
 import UseWindowWidth from "../../components/UI/MobileOnly/UseWindowWidth";
 import { useLoading } from "../../components/Context/LoadingContext/LoadingContext";
 
-//remover Logo em celular, dando problemas
-
 
 type Car = {
   name: string;
