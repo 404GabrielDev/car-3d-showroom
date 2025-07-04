@@ -1,4 +1,4 @@
-// LoadingContext.tsx
+// Contexto global pra tela de Loading
 import { createContext, useContext, useState} from "react";
 import type { ReactNode } from "react";
 
