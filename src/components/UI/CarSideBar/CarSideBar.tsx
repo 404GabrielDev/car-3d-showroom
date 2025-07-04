@@ -3,7 +3,6 @@ import "./CarSideBar.css";
 import ToggleButton from "../ToggleButton/ToggleButton";
 import { AnimatePresence, motion } from "framer-motion";
 import LoadingCar from "../LoadingCar/LoadingCar";
-//OTIMIZAR BOTÃO (deixar o botão parado enquanto apenas a galeria mexe no eixo x, relax, vai dá certo! tranquilidade, apenas faça, e seja melhor que ontem.)
 
 type Car = {
   name: string;
