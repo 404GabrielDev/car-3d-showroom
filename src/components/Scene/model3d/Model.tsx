@@ -141,7 +141,7 @@ function Model({ currentCarIndex, cars }) {
     return null;
   }
 
-  //capturando 1 frame
+  //captura o 1 frame da cena
   function SceneReadyTrigger() {
     const hasRun = useRef(false);
     const { setIsLoading } = useLoading();
