@@ -26,24 +26,24 @@ function LandingPage() {
   const cars: Car[] = [
     {
       name: "Porsche",
-      path: "/models3d/porsche.glb",
-      thumb: "/icons/PorscheIcon.webp",
+      path: `${import.meta.env.BASE_URL}models3d/porsche.glb`,
+      thumb: `${import.meta.env.BASE_URL}icons/PorscheIcon.webp`,
       scale: 70,
       position: [0, -0.01, 0],
       rotation: [0.02, 0, 0],
     },
     {
       name: "BMW X6",
-      path: "/models3d/bmw-x6.glb",
-      thumb: "/icons/bmwX6Icon.webp",
+      path: `${import.meta.env.BASE_URL}models3d/bmw-x6.glb`,
+      thumb: `${import.meta.env.BASE_URL}icons/bmwX6Icon.webp`,
       scale: 0.7,
       position: [-0.1, 0.41, 0],
       rotation: [0.02, 0, 0],
     },
     {
       name: "Mercedes",
-      path: "/models3d/Mercedes.glb",
-      thumb: "/icons/MercedesIcon.webp",
+      path: `${import.meta.env.BASE_URL}models3d/Mercedes.glb`,
+      thumb: `${import.meta.env.BASE_URL}icons/MercedesIcon.webp`,
       scale: width < 500 ? 0.7 : 0.6,
       position: [-0.2, -0.01, -0.2],
       rotation: [0.02, 1.5, 0],
@@ -51,8 +51,8 @@ function LandingPage() {
 
     {
       name: "BMW-M4",
-      path: "/models3d/BMW-M4.glb",
-      thumb: "/icons/BMW-M4Icon.webp",
+      path: `${import.meta.env.BASE_URL}models3d/BMW-M4.glb`,
+      thumb: `${import.meta.env.BASE_URL}icons/BMW-M4Icon.webp`,
       scale: width < 500 ? 0.7 : 0.7,
       position: [-0.2, -0.01, -0.2],
       rotation: [0.015, 4.7, 0],
@@ -60,8 +60,8 @@ function LandingPage() {
 
     {
       name: "Jaguar-2015",
-      path: "/models3d/Jaguar.glb",
-      thumb: "/icons/JaguarIcon.webp",
+      path: `${import.meta.env.BASE_URL}models3d/Jaguar.glb`,
+      thumb: `${import.meta.env.BASE_URL}icons/JaguarIcon.webp`,
       scale: width < 500 ? 85 : 80,
       position: [-0.2, -0.01, -0.2],
       rotation: [0.015, 0, 0],
