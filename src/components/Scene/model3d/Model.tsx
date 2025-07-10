@@ -162,7 +162,9 @@ function Model({ currentCarIndex, cars }) {
       if (!hasRun.current && !error) {
         hasRun.current = true;
         console.log("Primeiro frame visível — desativando loading");
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
       }
     });
 
