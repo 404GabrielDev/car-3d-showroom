@@ -12,13 +12,14 @@ import { useLoading } from "../../Context/LoadingContext/LoadingContext";
 import UseWindowWidth from "../../UI/MobileOnly/UseWindowWidth";
 
 function Model({ currentCarIndex, cars }) {
+  const base = import.meta.env.BASE_URL;
   const width = UseWindowWidth();
 
   const carGLTF = useLoader(GLTFLoader, cars[currentCarIndex].path);
 
-  const garageGLTF = useLoader(GLTFLoader, "/models3d/studio.glb");
+  const garageGLTF = useLoader(GLTFLoader, `${base}/models3d/studio.glb`);
 
-  const base = import.meta.env.BASE_URL;
+  
 
   const textures = useLoader(TextureLoader, [
     `${base}textures/reflex/Metal049A_2K-PNG_Metalness.png`,
