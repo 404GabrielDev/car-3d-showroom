@@ -18,22 +18,24 @@ function Model({ currentCarIndex, cars }) {
 
   const garageGLTF = useLoader(GLTFLoader, "/models3d/studio.glb");
 
+  const base = import.meta.env.BASE_URL;
+
   const textures = useLoader(TextureLoader, [
-    "/textures/reflex/Metal049A_2K-PNG_Metalness.png",
-    "/textures/reflex/Metal049A_2K-PNG_Roughness.png",
-    "/background/background1.png",
+    `${base}textures/reflex/Metal049A_2K-PNG_Metalness.png`,
+    `${base}textures/reflex/Metal049A_2K-PNG_Roughness.png`,
+    `${base}background/background1.png`,
 
-    "/textures/floorblack/MetalPlates004_2K-PNG_Color.png",
-    "/textures/floorblack/MetalPlates004_2K-PNG_Roughness.png",
-    "/textures/floorblack/MetalPlates004_2K-PNG_NormalGL.png",
-    "/textures/floorblack/MetalPlates004_2K-PNG_Displacement.png",
-    "/textures/floorblack/MetalPlates004_2K-PNG_Metalness.png",
+    `${base}textures/floorblack/MetalPlates004_2K-PNG_Color.png`,
+    `${base}textures/floorblack/MetalPlates004_2K-PNG_Roughness.png`,
+    `${base}textures/floorblack/MetalPlates004_2K-PNG_NormalGL.png`,
+    `${base}textures/floorblack/MetalPlates004_2K-PNG_Displacement.png`,
+    `${base}textures/floorblack/MetalPlates004_2K-PNG_Metalness.png`,
 
-    "/textures/reflexMetal/MetalPlates006_2K-PNG_Color.png",
-    "/textures/reflexMetal/MetalPlates006_2K-PNG_Metalness.png",
-    "/textures/reflexMetal/MetalPlates006_2K-PNG_Roughness.png",
-    "/textures/reflexMetal/MetalPlates006_2K-PNG_NormalGL.png",
-    "/textures/reflexMetal/MetalPlates006_2K-PNG_Displacement.png",
+    `${base}textures/reflexMetal/MetalPlates006_2K-PNG_Color.png`,
+    `${base}textures/reflexMetal/MetalPlates006_2K-PNG_Metalness.png`,
+    `${base}textures/reflexMetal/MetalPlates006_2K-PNG_Roughness.png`,
+    `${base}textures/reflexMetal/MetalPlates006_2K-PNG_NormalGL.png`,
+    `${base}textures/reflexMetal/MetalPlates006_2K-PNG_Displacement.png`,
   ]);
 
   const [metalMap, roughnessMap] = textures;

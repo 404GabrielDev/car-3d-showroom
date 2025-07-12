@@ -41,17 +41,17 @@ const ExplorePage = () => {
         <div className="keen-slider__slide number-slide1">
           <img
             id="cardImageSlider"
-            src="/explorePage/2001Mazda.webp"
+            src={`${import.meta.env.BASE_URL}/explorePage/2001Mazda.webp`}
             alt="Mazda"
           />
         </div>
         <div className="keen-slider__slide number-slide2">
-          <img id="cardImageSlider" src="/explorePage/BMW.webp" alt="BMW" />
+          <img id="cardImageSlider" src={`${import.meta.env.BASE_URL}/explorePage/BMW.webp`} alt="BMW" />
         </div>
         <div className="keen-slider__slide number-slide3">
           <img
             id="cardImageSlider"
-            src="/explorePage/Mercedes-Benz-SL65.webp"
+            src={`${import.meta.env.BASE_URL}/explorePage/Mercedes-Benz-SL65.webp`}
             alt="Mercedes"
           />
         </div>
@@ -69,7 +69,7 @@ const ExplorePage = () => {
         >
           {/* imagem */}
           <motion.img
-            src="/explorePage/Lexus.webp"
+            src={`${import.meta.env.BASE_URL}/explorePage/Lexus.webp`}
             alt="Car"
             initial={{ opacity: 1 }}
             animate={{ opacity: hoveredCard === "lexus" ? 0 : 1 }}
@@ -84,7 +84,7 @@ const ExplorePage = () => {
                 preload="auto"
                 key="lexus-video"
                 ref={videoRef}
-                src="/explorePage/Lexus-ls.webm"
+                src={`${import.meta.env.BASE_URL}/explorePage/Lexus-ls.webm`}
                 autoPlay
                 loop
                 muted
@@ -111,7 +111,7 @@ const ExplorePage = () => {
         >
           {/* imagem */}
           <motion.img
-            src="/explorePage/BMWM3.webp"
+            src={`${import.meta.env.BASE_URL}/explorePage/BMWM3.webp`}
             alt="Car"
             initial={{ opacity: 1 }}
             animate={{ opacity: hoveredCard === "bmw" ? 0 : 1 }}
@@ -126,7 +126,7 @@ const ExplorePage = () => {
                 preload="auto"
                 key="bmw-video"
                 ref={videoRef2}
-                src="/explorePage/BMW-M.mp4"
+                src={`${import.meta.env.BASE_URL}/explorePage/BMW-M.mp4`}
                 autoPlay
                 loop
                 muted
@@ -153,7 +153,7 @@ const ExplorePage = () => {
         >
           {/* imagem */}
           <motion.img
-            src="/explorePage/AudiIcon.webp"
+            src={`${import.meta.env.BASE_URL}/explorePage/AudiIcon.webp`}
             alt="Car"
             initial={{ opacity: 1 }}
             animate={{ opacity: hoveredCard === "audi" ? 0 : 1 }}
@@ -168,7 +168,7 @@ const ExplorePage = () => {
                 preload="auto"
                 key="audi-video"
                 ref={videoRef3}
-                src="/explorePage/Audi-r8.webm"
+                src={`${import.meta.env.BASE_URL}/explorePage/Audi-r8.webm`}
                 autoPlay
                 loop
                 muted
@@ -195,7 +195,7 @@ const ExplorePage = () => {
         >
           {/* imagem */}
           <motion.img
-            src="/explorePage/SubaruIcon.webp"
+            src={`${import.meta.env.BASE_URL}/explorePage/SubaruIcon.webp`}
             alt="Car"
             initial={{ opacity: 1 }}
             animate={{ opacity: hoveredCard === "Subaru" ? 0 : 1 }}
@@ -210,7 +210,7 @@ const ExplorePage = () => {
                 preload="auto"
                 key="Subaru-video"
                 ref={videoRef4}
-                src="/explorePage/Subaru-2022.webm"
+                src={`${import.meta.env.BASE_URL}/explorePage/Subaru-2022.webm`}
                 autoPlay
                 loop
                 muted
