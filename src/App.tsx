@@ -58,3 +58,8 @@ function App() {
 }
 
 export default App;
+
+//ultimas coisas que fiz
+
+//removi o loading de animação pesado e deixei apenas texto
+//adicionei timeout pra definir a tela de loading false, já que ele aparecia instantaneamente apos o primeiro frame.

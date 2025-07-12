@@ -163,7 +163,7 @@ function Model({ currentCarIndex, cars }) {
         hasRun.current = true;
         console.log("Primeiro frame visível — desativando loading");
         setTimeout(() => {
-          setIsLoading(false);
+          setIsLoading(false); //adicionei isto pra remover o bug de animação
         }, 500);
       }
     });
